@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+    background-color: #F2F2F2
+}
+body .content {
+    margin: 0px 0px 0px auto;
+    padding-left: 50px;
+}
+
+body .content h1 {
+    display: block;
+    margin: 0px;
+    padding: 25px 0 0;
+    font-family: 'Source Sans Pro 600', sans-serif;
+    font-size: 72px;
+    color: #0D0D0D
+}
+
+body .content p {
+    display: block;
+    margin: 5px 0px 10px 5px;
+    padding: 0px;
+    font-family: 'Source Sans Pro 600', sans-serif;
+    font-size: 17px;
+    color: #262626
+}
