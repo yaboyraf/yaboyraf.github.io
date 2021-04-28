@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Antonio', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,7 @@ body {
   flex: 0.5;
   margin: 10px;
   position: relative;
-  transition: flex 0.7s ease-in;
+  transition: flex 0.5s ease-in;
 }
 
 .panel h3 {
@@ -48,7 +48,7 @@ body {
 
 .panel.active h3 {
   opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;;
+  transition: opacity 0.3s ease-in 0.5s;;
 }
 
 @media(max-width: 480px) {
