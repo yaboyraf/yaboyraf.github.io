@@ -103,10 +103,7 @@ h1 {
   background-color: var(--right-bg-color);
 }
 
-.split.right,
-.split.left,
-.split.right::before,
-.split.left::before {
+.split.right, .split.left, .split.right::before, .split.left--before {
   transition: all var(--speed) ease-in-out;
 }
 
@@ -126,7 +123,7 @@ h1 {
   width: var(--other-width);
 }
 
-@media (max-width: 800px) {
+@media(max-width: 800px) {
   h1 {
     font-size: 2rem;
     top: 30%;
