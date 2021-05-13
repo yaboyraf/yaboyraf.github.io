@@ -23,10 +23,9 @@ body {
   border: none;
   color: #fff;
   margin: 1rem;
-  padding: 1.5rem 3rem;
+  padding: 1.4rem 3rem;
   font-size: 1.2rem;
   font-family: inherit;
-  cursor: pointer;
 }
 
 .btn:hover {
