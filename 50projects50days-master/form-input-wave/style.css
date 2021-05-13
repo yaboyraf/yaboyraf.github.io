@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
 * {
   box-sizing: border-box;
@@ -37,7 +37,7 @@ body {
   cursor: pointer;
   display: inline-block;
   width: 100%;
-  background: lightblue;
+  background-color: lightblue;
   padding: 15px;
   font-family: inherit;
   font-size: 16px;
@@ -74,7 +74,7 @@ body {
   color: #fff;
 }
 
-.form-control input:focus,
+.form-control input:focus, 
 .form-control input:valid {
   outline: 0;
   border-bottom-color: lightblue;
@@ -84,7 +84,6 @@ body {
   position: absolute;
   top: 15px;
   left: 0;
-  pointer-events: none;
 }
 
 .form-control label span {
@@ -94,7 +93,7 @@ body {
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.form-control input:focus + label span,
+.form-control input:focus + label span, 
 .form-control input:valid + label span {
   color: lightblue;
   transform: translateY(-30px);
