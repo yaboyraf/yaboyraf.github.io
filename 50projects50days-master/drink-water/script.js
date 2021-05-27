@@ -1,22 +1,20 @@
 const smallCups = document.querySelectorAll('.cup-small')
-const listers = document.getElementById('liters')
+const liters = document.getElementById('liters')
 const percentage = document.getElementById('percentage')
 const remained = document.getElementById('remained')
 
 updateBigCup()
 
-smallCups.forEach((cup, idx) => {
-    cup.addEventListener('click', () => highlightCups(idx))
+smallCups.forEach((cup, index) => {
+    cup.addEventListener('click', () => highlightCups(index))
 })
 
-function highlightCups(idx) {
-    if (idx===7 && smallCups[idx].classList.contains("full")) idx--;
-    else if(smallCups[idx].classList.contains('full') && !smallCups[idx].nextElementSibling.classList.contains('full')) {
-        idx--
+function highlightCups(index) {
+    if(smallCups[index].classList.contains('full') && !smallCups[index].nextElementSibling.classList.contains('full')) {
+        index--
     }
-
-    smallCups.forEach((cup, idx2) => {
-        if(idx2 <= idx) {
+    smallCups.forEach((cup, index2) => {
+        if(index2 <= index) {
             cup.classList.add('full')
         } else {
             cup.classList.remove('full')
@@ -44,6 +42,6 @@ function updateBigCup() {
         remained.style.height = 0
     } else {
         remained.style.visibility = 'visible'
-        listers.innerText = `${2 - (250 * fullCups / 1000)}L`
+        liters.innerText = `${2 - (250 * fullCups / 1000)}L`
     }
 }
