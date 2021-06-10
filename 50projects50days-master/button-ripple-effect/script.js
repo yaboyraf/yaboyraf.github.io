@@ -1,12 +1,12 @@
 const buttons = document.querySelectorAll('.ripple')
 
 buttons.forEach(button => {
-    button.addEventListener('click', function (e) {
+    button.addEventListener('click', function(e) {
         const x = e.clientX
         const y = e.clientY
 
         const buttonTop = e.target.offsetTop
-        const buttonLeft = e.target.offsetLeft
+        const buttonLeft= e.target.offsetLeft
 
         const xInside = x - buttonLeft
         const yInside = y - buttonTop
@@ -18,6 +18,6 @@ buttons.forEach(button => {
 
         this.appendChild(circle)
 
-        setTimeout(() => circle.remove(), 500)
+        setTimeout(() => circle.remove(), 250)
     })
 })
