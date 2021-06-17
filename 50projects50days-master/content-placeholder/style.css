@@ -95,6 +95,6 @@ img {
     }
     
     100% {
-        background-position: -150% 0;
+        background-position: -150%;
     }
 }
