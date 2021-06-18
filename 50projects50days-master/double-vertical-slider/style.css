@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
 
 * {
   box-sizing: border-box;
@@ -24,7 +24,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform 0.5s ease-in-out;
+  transition: transform .5s ease-in-out;
 }
 
 .left-slide > div {
@@ -49,7 +49,7 @@ body {
   top: 0;
   left: 35%;
   width: 65%;
-  transition: transform 0.5s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 
 .right-slide > div {
@@ -94,4 +94,5 @@ button:focus {
   transform: translateY(-100%);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+
 }
