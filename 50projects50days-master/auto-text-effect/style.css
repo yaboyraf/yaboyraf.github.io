@@ -24,7 +24,7 @@ div {
   font-size: 18px;
 }
 
-input {
+input{
   width: 50px;
   padding: 5px;
   font-size: 18px;
@@ -33,6 +33,6 @@ input {
   text-align: center;
 }
 
-input:focus {
+input:focus{
   outline: none;
 }
