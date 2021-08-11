@@ -25,7 +25,7 @@ clipboardEl.addEventListener('click', () => {
     textarea.select()
     document.execCommand('copy')
     textarea.remove()
-    alert('Password copied to clipboard!')
+    alert('Password copied to clipboard')
 })
 
 generateEl.addEventListener('click', () => {
@@ -42,7 +42,7 @@ function generatePassword(lower, upper, number, symbol, length) {
     let generatedPassword = ''
     const typesCount = lower + upper + number + symbol
     const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0])
-    
+
     if(typesCount === 0) {
         return ''
     }
@@ -75,3 +75,4 @@ function getRandomSymbol() {
     const symbols = '!@#$%^&*(){}[]=<>/,.'
     return symbols[Math.floor(Math.random() * symbols.length)]
 }
+// console.log(getRandomSymbol())
