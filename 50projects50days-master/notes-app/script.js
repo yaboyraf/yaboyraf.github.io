@@ -19,8 +19,7 @@ function addNewNote(text = '') {
     </div>
 
     <div class="main ${text ? "" : "hidden"}"></div>
-    <textarea class="${text ? "hidden" : ""}"></textarea>
-    `
+    <textarea class="${text ? "hidden" : ""}"></textarea>`
 
     const editBtn = note.querySelector('.edit')
     const deleteBtn = note.querySelector('.delete')
@@ -43,7 +42,6 @@ function addNewNote(text = '') {
 
     textArea.addEventListener('input', (e) => {
         const { value } = e.target
-
         main.innerHTML = marked(value)
 
         updateLS()
@@ -51,6 +49,7 @@ function addNewNote(text = '') {
 
     document.body.appendChild(note)
 }
+
 
 function updateLS() {
     const notesText = document.querySelectorAll('textarea')
