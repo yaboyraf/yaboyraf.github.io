@@ -47,7 +47,7 @@ function addNewNote(text = '') {
         updateLS()
     })
 
-    document.body.appendChild(note)
+    document.body.insertBefore(note, document.querySelectorAll('.note')[0])
 }
 
 
@@ -58,5 +58,5 @@ function updateLS() {
 
     notesText.forEach(note => notes.push(note.value))
 
-    localStorage.setItem('notes', JSON.stringify(notes))
+    localStorage.setItem('notes', JSON.stringify(notes.reverse()))
 }
