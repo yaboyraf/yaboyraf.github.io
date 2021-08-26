@@ -10,6 +10,9 @@ function addTodo(newTodo) {
     todo.push(newTodo)
     li.innerHTML = newTodo
     todoList.appendChild(li)
+
+    //save in local storage
+    localStorage.setItem('todos', JSON.stringify(todo))
 }
 
 submit.addEventListener('click', (e) => {
