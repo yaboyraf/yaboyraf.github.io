@@ -10,11 +10,11 @@ let app = {
 var template = (
     <div>
         <h1>{app.title}</h1> 
-        {app.subtitle && <p>app.subtitle</p>}
+        {app.subtitle && <p>{app.subtitle}</p>}
         <p>{app.options.length > 0 ? 'Here are your options:' : 'No Options'}</p>
         <ol>
-          <li>item 1</li>
-          <li>item 2</li>
+          <li>{app.options[0]}</li>
+          <li>{app.options[1]}</li>
         </ol>
     </div>
 )

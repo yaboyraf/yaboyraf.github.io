@@ -19,7 +19,7 @@ var app = {
   app.subtitle && React.createElement(
     'p',
     null,
-    'app.subtitle'
+    app.subtitle
   ),
   React.createElement(
     'p',
@@ -32,12 +32,12 @@ var app = {
     React.createElement(
       'li',
       null,
-      'item 1'
+      app.options[0]
     ),
     React.createElement(
       'li',
       null,
-      'item 2'
+      app.options[1]
     )
   )
 );
