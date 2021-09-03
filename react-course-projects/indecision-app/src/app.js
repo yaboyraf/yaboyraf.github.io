@@ -7,7 +7,7 @@ let app = {
 }
 
 // JSX means: Javascript XML
-var template = (
+let template = (
     <div>
         <h1>{app.title}</h1> 
         {app.subtitle && <p>{app.subtitle}</p>}
@@ -19,7 +19,7 @@ var template = (
     </div>
 )
 
-var user = {
+let user = {
   name: 'Raf',
   age: 28,
   location: 'San Jose'
@@ -31,13 +31,13 @@ function getLocation(location) {
   }
 }
 
-var templateTwo = (
+let templateTwo = (
    <div>
       <h1>{user.name ? user.name : 'Anonymous'}</h1>
       {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
       {getLocation(user.location)}
    </div>
 )
-var appRoot = document.getElementById('app')
+const appRoot = document.getElementById('app')
 
 ReactDOM.render(template, appRoot)

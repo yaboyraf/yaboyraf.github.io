@@ -1,80 +1,29 @@
 'use strict';
 
-//console.log("@@ app.js is running")
+//var can be reassigned and redefined
+var nameVar = 'Raf';
+var nameVar = 'Andrew';
+console.log('nameVar: ', nameVar);
 
-var app = {
-  title: 'Indecision App',
-  subtitle: 'Let the computer decide',
-  options: ['One', 'Two']
+//let can be reassigned, not redefined
+var nameLet = 'Jenn';
+nameLet = 'Julie';
+console.log('nameLet: ', nameLet);
 
-  // JSX means: Javascript XML
-};var template = React.createElement(
-  'div',
-  null,
-  React.createElement(
-    'h1',
-    null,
-    app.title
-  ),
-  app.subtitle && React.createElement(
-    'p',
-    null,
-    app.subtitle
-  ),
-  React.createElement(
-    'p',
-    null,
-    app.options.length > 0 ? 'Here are your options:' : 'No Options'
-  ),
-  React.createElement(
-    'ol',
-    null,
-    React.createElement(
-      'li',
-      null,
-      app.options[0]
-    ),
-    React.createElement(
-      'li',
-      null,
-      app.options[1]
-    )
-  )
-);
+//const can't be reassigned nor redefined
+var nameConst = 'Frank';
+console.log('nameConst: ', nameConst);
 
-var user = {
-  name: 'Raf',
-  age: 28,
-  location: 'San Jose'
-};
+//block scoping
 
-function getLocation(location) {
-  if (location) {
-    return React.createElement(
-      'p',
-      null,
-      'Location: ',
-      location
-    );
-  }
+var fullName = 'Rafael Guevara';
+var firstName = void 0;
+
+if (fullName) {
+  firstName = fullName.split(' ')[0];
+  console.log(firstName);
 }
 
-var templateTwo = React.createElement(
-  'div',
-  null,
-  React.createElement(
-    'h1',
-    null,
-    user.name ? user.name : 'Anonymous'
-  ),
-  user.age && user.age >= 18 && React.createElement(
-    'p',
-    null,
-    'Age: ',
-    user.age
-  ),
-  getLocation(user.location)
-);
-var appRoot = document.getElementById('app');
+console.log(firstName);
 
-ReactDOM.render(template, appRoot);
+//always start with const, change to let if you need to, NEVER USE VAR
