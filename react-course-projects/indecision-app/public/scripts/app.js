@@ -1,29 +1,110 @@
 'use strict';
 
-//var can be reassigned and redefined
-var nameVar = 'Raf';
-var nameVar = 'Andrew';
-console.log('nameVar: ', nameVar);
+//console.log("@@ app.js is running")
 
-//let can be reassigned, not redefined
-var nameLet = 'Jenn';
-nameLet = 'Julie';
-console.log('nameLet: ', nameLet);
+var app = {
+  title: 'Indecision App',
+  subtitle: 'Let the computer decide',
+  options: ['yes', 'no']
 
-//const can't be reassigned nor redefined
-var nameConst = 'Frank';
-console.log('nameConst: ', nameConst);
+  // JSX means: Javascript XML
+};var template = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    app.title
+  ),
+  app.subtitle && React.createElement(
+    'p',
+    null,
+    app.subtitle
+  ),
+  React.createElement(
+    'p',
+    null,
+    app.options.length > 0 ? 'Here are your options:' : 'No Options'
+  ),
+  React.createElement(
+    'ol',
+    null,
+    React.createElement(
+      'li',
+      null,
+      app.options[0]
+    ),
+    React.createElement(
+      'li',
+      null,
+      app.options[1]
+    )
+  )
+);
 
-//block scoping
+var user = {
+  name: 'Raf',
+  age: 28,
+  location: 'San Jose'
+};
 
-var fullName = 'Rafael Guevara';
-var firstName = void 0;
-
-if (fullName) {
-  firstName = fullName.split(' ')[0];
-  console.log(firstName);
+function getLocation(location) {
+  if (location) {
+    return React.createElement(
+      'p',
+      null,
+      'Location: ',
+      location
+    );
+  }
 }
 
-console.log(firstName);
+var count = 0;
 
-//always start with const, change to let if you need to, NEVER USE VAR
+var addOne = function addOne() {
+  count++;
+  renderCounterApp();
+};
+
+var minusOne = function minusOne() {
+  count--;
+  renderCounterApp();
+};
+
+var reset = function reset() {
+  count = 0;
+  renderCounterApp();
+};
+
+var appRoot = document.getElementById('app');
+
+var renderCounterApp = function renderCounterApp() {
+  var templateTwo = React.createElement(
+    'div',
+    null,
+    React.createElement(
+      'h1',
+      null,
+      'Count: ',
+      count
+    ),
+    React.createElement(
+      'button',
+      { onClick: minusOne },
+      '-1'
+    ),
+    React.createElement(
+      'button',
+      { onClick: addOne },
+      '+1'
+    ),
+    React.createElement(
+      'button',
+      { onClick: reset },
+      '0'
+    )
+  );
+  ReactDOM.render(templateTwo, appRoot);
+};
+
+renderCounterApp();
