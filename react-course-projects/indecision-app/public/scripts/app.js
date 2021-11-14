@@ -101,10 +101,6 @@ var Action = function (_React$Component3) {
   return Action;
 }(React.Component);
 
-// Add remove all button
-// setup handleRemoveAll button -> alert something
-// setup onClick to fire the method
-
 var Options = function (_React$Component4) {
   _inherits(Options, _React$Component4);
 

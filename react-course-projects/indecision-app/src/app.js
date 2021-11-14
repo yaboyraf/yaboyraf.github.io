@@ -38,10 +38,6 @@ class Action extends React.Component {
   }
 }
 
-// Add remove all button
-// setup handleRemoveAll button -> alert something
-// setup onClick to fire the method
-
 class Options extends React.Component {
   handleRemoveAll() {
     alert('removed all')
